@@ -1,14 +1,14 @@
 import express from "express";
 import formidable from "express-formidable";
 
-
-
 import {
-    createPost,
-    getAllPosts,
+    createQuestion,
+    getAllQuestions
 }
 from '../controllers/post';
 const router = express.Router();
-router.post("/create-post", createPost);
-router.get("/get-all-posts", getAllPosts);
+
+router.post("/create-question", createQuestion);
+router.get("/get-all-posts",getAllQuestions );
+
 module.exports = router;
