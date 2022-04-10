@@ -3,6 +3,7 @@ import { hashPassword, comparePassword } from "../helpers/auth";
 import jwt from "jsonwebtoken";
 import { nanoid } from "nanoid";
 
+
 export const register = async (req, res) => {
   //  console.log("REGISTER ENDPOINT => ", req.body);
   const { fname, email, password, lname } = req.body;

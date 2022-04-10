@@ -3,7 +3,7 @@ import express from "express";
 const router = express.Router();
 
 // middleware
-import {  isAdmin } from "../middlewares";
+// import {  isAdmin } from "../middlewares";
 // controllers
 import {
   register,
@@ -14,9 +14,9 @@ import {
 
 router.post("/register", register);
 router.post("/login", login);
-router.get("/current-user",  currentUser);
+// router.get("/current-user",  currentUser);
 
-router.get("/current-admin", isAdmin, currentUser);
+// router.get("/current-admin", isAdmin, currentUser);
 
 
 module.exports = router;
