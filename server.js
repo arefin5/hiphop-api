@@ -30,15 +30,8 @@ app.use(
 app.get('/', (req, res) => {
   res.send('hello world')
 });
-// autoload routes
-// app.use('/api',auth);
-// app.use('/api',post)
+
 readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
-
-
-
-
-
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

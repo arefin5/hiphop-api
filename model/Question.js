@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const { ObjectId } = mongoose.Schema;
 const PostQuestionSchema = new mongoose.Schema({
-    title: {
+    questionName: {
         type: String,
         required: true,
         trim: true

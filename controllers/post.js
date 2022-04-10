@@ -10,20 +10,18 @@ export const getAllPosts = (req, res) => {
     res.send('hello world');
 }
 export const createQuestion = async (req, res) => {
-    const { title, first,second,third,fourth } = req.body;
+    const { questionName, first,second,third,fourth } = req.body;
     console.log(req.body);
     try{
         const question = await Question.create({
-            title,
+            questionName,
           first,
           second,
           third,
           fourth
         });
         question.save();
-
         res.json({ok:true});
-
     }catch(err){
         console.log(err);
     }
