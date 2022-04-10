@@ -1,11 +1,11 @@
 // import Post from "../models/post";
 import User from "../model/user";
-import expressJwt from "express-jwt";
+// import expressJwt from "express-jwt";
 
-export const requireSignin = expressJwt({
-  secret:'shhhhhhared-secretshhhhhhared-secret',
-  algorithms: ["HS256"],
-});
+// export const requireSignin = expressJwt({
+//   secret:'shhhhhhared-secretshhhhhhared-secret',
+//   algorithms: ["HS256"],
+// });
 
 // export const canEditDeletePost = async (req, res, next) => {
 //   try {

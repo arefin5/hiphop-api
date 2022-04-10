@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { readdirSync } from "fs";
 
-
 const morgan = require("morgan");
 require("dotenv").config();
 
@@ -30,8 +29,9 @@ app.use(
 app.get('/', (req, res) => {
   res.send('hello world')
 });
-
-readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
+app.use('/api/', require('./routes/auth'));
+app.use('/api/', require('./routes/post'));
+// readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
