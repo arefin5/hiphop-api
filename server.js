@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 // db
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect(process.env.DATABASE || `mongodb+srv://arefin:arefin@cluster0.xl4t5.mongodb.net/flip-cart?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
